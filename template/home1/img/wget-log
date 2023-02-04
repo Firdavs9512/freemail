@@ -1,0 +1,11 @@
+--2023-01-25 15:20:11--  https://images.ctfassets.net/y6oq7udscnj8/5goiAQ9CkpdCaAgS3w2zyx/b75d1eddfc40ed3a4d4564eb2a496c68/Mailjet-Message__1_.png?w=1424
+Resolving images.ctfassets.net (images.ctfassets.net)... 18.165.61.126, 18.165.61.94, 18.165.61.83, ...
+Connecting to images.ctfassets.net (images.ctfassets.net)|18.165.61.126|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 62717 (61K) [image/png]
+Saving to: ‘Mailjet-Message__1_.png?w=1424’
+
+          Mailjet-M   0%[                    ]       0  --.-KB/s               Mailjet-Message__1_ 100%[===================>]  61,25K  --.-KB/s    in 0,06s   
+
+2023-01-25 15:20:11 (1,08 MB/s) - ‘Mailjet-Message__1_.png?w=1424’ saved [62717/62717]
+

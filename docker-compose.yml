@@ -1,0 +1,18 @@
+version: '3.0'
+
+services: 
+  db: 
+    image: mysql
+    restart: always
+
+    volumes:
+      - "./.mysql-data/db:/var/lib/mysql"
+
+    environment: 
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: freemail
+      MYSQL_USER: firdavs
+      MYSQL_PASSWORD: nobody
+
+    ports: 
+      - 3000:3306
