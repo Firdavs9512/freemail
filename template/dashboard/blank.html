@@ -9,13 +9,13 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <title>Otika - Admin Dashboard Template</title>
   <!-- General CSS Files -->
-  <link rel="stylesheet" href="{{ .url }}/template/dashboard/assets/css/app.min.css">
+  <link rel="stylesheet" href="/template/dashboard/assets/css/app.min.css">
   <!-- Template CSS -->
-  <link rel="stylesheet" href="{{ .url }}/template/dashboard/assets/css/style.css">
-  <link rel="stylesheet" href="{{ .url }}/template/dashboard/assets/css/components.css">
+  <link rel="stylesheet" href="/template/dashboard/assets/css/style.css">
+  <link rel="stylesheet" href="/template/dashboard/assets/css/components.css">
   <!-- Custom style CSS -->
-  <link rel="stylesheet" href="{{ .url }}/template/dashboard/assets/css/custom.css">
-  <link rel='shortcut icon' type='image/x-icon' href='{{ .url }}/template/dashboard/assets/img/favicon.png' />
+  <link rel="stylesheet" href="/template/dashboard/assets/css/custom.css">
+  <link rel='shortcut icon' type='image/x-icon' href='/template/dashboard/assets/img/favicon.png' />
 </head>
 
 <body>
@@ -73,10 +73,10 @@
           </li>
           <li class="dropdown"><a href="#" data-toggle="dropdown"
               class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image"
-                src="{{ .url }}/template/dashboard/assets/img/user.png" class="user-img-radious-style"> <span
+                src="/template/dashboard/assets/img/user.png" class="user-img-radious-style"> <span
                 class="d-sm-none d-lg-inline-block"></span></a>
             <div class="dropdown-menu dropdown-menu-right pullDown">
-              <div class="dropdown-title">Hello {{ .user.FirsName }} {{ .user.LastName }}</div>
+              <div class="dropdown-title">Hello {{ .user.FirstName }} {{ .user.LastName }}</div>
               <a href='{{ urlpath "profile" }}' class="dropdown-item has-icon"> <i class="far
 										fa-user"></i> Profile
               </a>
@@ -92,7 +92,7 @@
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href='{{ urlpath "home" }}'> <img alt="image" src="{{ .url }}/template/dashboard/assets/img/favicon.png"
+            <a href='{{ urlpath "home" }}'> <img alt="image" src="/template/dashboard/assets/img/favicon.png"
                 class="header-logo" /> <span class="logo-name">FreeMail</span>
             </a>
           </div>
@@ -135,7 +135,7 @@
                     <div class="card-body">
                       <div class="form-group">
                         <label>Token name</label>
-                        <input name="name" type="text" class="form-control">
+                        <input name="name" type="text" class="form-control" required>
                       </div>
                       <div class="form-group">
                         <label>Templates</label>
@@ -144,7 +144,7 @@
                           {{ range .templates }}
                           <div class="col-6 col-sm-4">
                             <label class="imagecheck mb-4">
-                              <input name="template" type="radio" value='{{ .File }}' class="imagecheck-input" />
+                              <input name="template" type="radio" value='{{ .File }}' class="imagecheck-input" checked />
                               <span class="imagecheck-figure">
                                 <img width="120px" src='/uploads/{{ .Image }}' alt="html"
                                   class="imagecheck-image">
@@ -271,13 +271,13 @@
     </div>
   </div>
   <!-- General JS Scripts -->
-  <script src="{{ .url }}/template/dashboard/assets/js/app.min.js"></script>
+  <script src="/template/dashboard/assets/js/app.min.js"></script>
   <!-- JS Libraies -->
   <!-- Page Specific JS File -->
   <!-- Template JS File -->
-  <script src="{{ .url }}/template/dashboard/assets/js/scripts.js"></script>
+  <script src="/template/dashboard/assets/js/scripts.js"></script>
   <!-- Custom JS File -->
-  <script src="{{ .url }}/template/dashboard/assets/js/custom.js"></script>
+  <script src="/template/dashboard/assets/js/custom.js"></script>
 </body>
 
 

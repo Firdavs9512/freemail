@@ -44,6 +44,13 @@ func GetTemplate(id uint) Templates {
 }
 
 // Get all templates
+func GetAllTemplates() []Templates {
+	var tmpl []Templates
+	db.Find(&tmpl)
+	return tmpl
+}
+
+// Get all templates only active true
 func GetTemplates() []Templates {
 	var tmpl []Templates
 	db.Find(&tmpl, "active=true")

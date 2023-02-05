@@ -67,7 +67,7 @@ func AdminCreateTemplateReq(ctx iris.Context) {
 
 // Get all templates
 func GetAllTemplates() []databases.Templates {
-	temp := databases.GetTemplates()
+	temp := databases.GetAllTemplates()
 	return temp
 }
 

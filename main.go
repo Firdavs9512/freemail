@@ -32,7 +32,7 @@ func init() {
 
 func main() {
 
-	app := iris.Default()
+	app := iris.New()
 
 	// Routers
 	routers.IndexRouter(app)

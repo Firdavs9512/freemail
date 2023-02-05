@@ -34,8 +34,6 @@ func DashboardIndex(ctx iris.Context) {
 }
 
 func DashboardCreateToken(ctx iris.Context) {
-	url := components.ParseUrl(ctx)
-	ctx.ViewData("url", url)
 
 	// Get user data for base
 	email := components.Sess.Start(ctx).GetString("email")

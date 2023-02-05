@@ -15,7 +15,7 @@ func AdminDashboard(ctx iris.Context) {
 
 	ctx.ViewData("users", len(databases.GetAllUsers()))
 	ctx.ViewData("tokens", len(databases.GetAllTokens()))
-	ctx.ViewData("templates", len(databases.GetTemplates()))
+	ctx.ViewData("templates", len(databases.GetAllTemplates()))
 	ctx.ViewData("primumusers", len(databases.GetPrimumUsers()))
 
 	ctx.View("/admin/index.html")
