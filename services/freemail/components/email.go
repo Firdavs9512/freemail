@@ -30,7 +30,7 @@ func SendEmail(to_email, message, templ, subject string) error {
 	// Render the HTML template and set it as the body of the message
 	var buf bytes.Buffer
 	data := map[string]interface{}{
-		"Message": message,
+		"message": message,
 	}
 	if err := tmpl.Execute(&buf, data); err != nil {
 		return err
