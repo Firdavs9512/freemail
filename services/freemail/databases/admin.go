@@ -35,6 +35,7 @@ func Create() {
 		Username: "admin",
 		Password: "test",
 		Active:   true,
+		Secret:   true,
 	}
 
 	result := db.Create(&admin)
@@ -61,7 +62,7 @@ func AdminLoginForName(name string) Admins {
 func GetAllAdmins() []Admins {
 	var admins []Admins
 
-	db.Find(&admins)
+	db.Find(&admins, "secret=false")
 
 	return admins
 

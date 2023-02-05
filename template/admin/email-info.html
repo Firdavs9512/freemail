@@ -353,7 +353,7 @@
     
     $.ajax({
       type: "POST",
-      url: "/api/v1/admin",
+      url: '{{ urlpath "adminsendemailreq" }}',
 
       data: { email: email, message: message, subject: subject }
     }).done(function( msg ) {

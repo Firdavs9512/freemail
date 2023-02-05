@@ -33,5 +33,6 @@ func AdminRouter(app router.Party) {
 		app.Post("/user-delete", controller.AdminMiddlware, controller.AdminDeleteUser).Name = "admindeleteuser"
 		app.Post("/contact-email", controller.ContactEmail).Name = "adminemail"
 		app.Post("/contact-email-delete", controller.AdminMiddlware, controller.AdminDeleteEmail).Name = "admindeleteemail"
+		app.Post("/send-email", controller.AdminMiddlware, controller.AdminSendEmailReq).Name = "adminsendemailreq"
 	}
 }

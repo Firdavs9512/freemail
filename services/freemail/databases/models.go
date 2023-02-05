@@ -21,6 +21,7 @@ type Admins struct {
 	gorm.Model
 	Username string `gorm:"not null;unique"`
 	Password string `gorm:"not null"`
+	Secret   bool   `gorm:"default:false"`
 	Active   bool
 }
 

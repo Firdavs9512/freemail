@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"github.com/firdavs9512/freemail/services/freemail/components"
 	"github.com/firdavs9512/freemail/services/freemail/databases"
 	"github.com/kataras/iris/v12"
 )
@@ -45,4 +46,24 @@ func AdminDeleteEmail(ctx iris.Context) {
 
 	ctx.StatusCode(iris.StatusOK)
 	ctx.SetCookieKV("message", "Email delete successfull!")
+}
+
+// Admin send email to users
+func AdminSendEmailReq(ctx iris.Context) {
+	email := ctx.PostValue("email")
+	message := ctx.PostValue("message")
+	subject := ctx.PostValue("subject")
+
+	err := components.SendEmail(email, message, "admintemplate.html", subject)
+
+	if err != nil {
+		ctx.JSON(iris.Map{
+			"message": "Error send email! error: " + err.Error(),
+		})
+		return
+	}
+
+	ctx.JSON(iris.Map{
+		"message": "Email successfull sended!",
+	})
 }
