@@ -12,6 +12,12 @@ func CreateTokenRouter(ctx iris.Context) {
 
 	email := components.Sess.Start(ctx).GetString("email")
 
+	if name == "" || check == "" {
+		ctx.SetCookieKV("error", "Name or template not selected!")
+		ctx.Redirect("/dashboard")
+		return
+	}
+
 	token, err := databases.CreateToken(email, name, check)
 
 	if err != nil {
