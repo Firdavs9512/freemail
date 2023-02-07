@@ -32,12 +32,14 @@ func ApiForUsers(ctx iris.Context) {
 		ctx.JSON(iris.Map{
 			"message": "Your token not found!",
 		})
+		return
 	}
 
 	if token.Maxreq < token.Request {
 		ctx.JSON(iris.Map{
 			"message": "Token request max!",
 		})
+		return
 	}
 
 	err := databases.TokenRequestUpdate(token.ID, token.Request+1)
@@ -45,6 +47,7 @@ func ApiForUsers(ctx iris.Context) {
 		ctx.JSON(iris.Map{
 			"message": "Your token not found!",
 		})
+		return
 	}
 
 	// Send email
@@ -54,6 +57,7 @@ func ApiForUsers(ctx iris.Context) {
 		ctx.JSON(iris.Map{
 			"message": "Your token not found!",
 		})
+		return
 	}
 
 	ctx.JSON(iris.Map{

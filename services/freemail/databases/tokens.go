@@ -22,10 +22,10 @@ func CreateToken(email string, name string, temp string) (Token, error) {
 	if user.Plan == 1 && len(tokens) >= 3 {
 		return Token{}, errors.New("User token limit full !!!")
 	}
-	if user.Plan == 2 && len(tokens) >= 3 {
+	if user.Plan == 2 && len(tokens) >= 5 {
 		return Token{}, errors.New("User token limit max !!!")
 	}
-	if user.Plan == 3 && len(tokens) >= 5 {
+	if user.Plan == 3 && len(tokens) >= 7 {
 		return Token{}, errors.New("User token limit full !!!")
 	}
 	if user.Plan == 4 && len(tokens) >= 10 {
