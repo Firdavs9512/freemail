@@ -49,6 +49,8 @@ func IndexRouter(app router.Party) {
 		app.Get("/services", controller.Services)
 		app.Get("/service-promotion", controller.ServicesPromotion)
 		app.Get("/reseller", controller.Reseller)
-
+		app.Get("/robots.txt",controller.Robotstxt)
+		app.Get("/sitemap.xml",controller.Sitemapxml)
+		app.Get("ads.txt",controller.Adstxt)
 	}
 }

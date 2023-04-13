@@ -74,11 +74,11 @@
             </ul>
           </div>
           <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
-            <li class="social-icons-twitter"><a data-toggle="tooltip" href="http://www.twitter.com/harnishdesign/"
+            <li class="social-icons-twitter"><a data-toggle="tooltip" href="http://www.twitter.com/"
                 target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
-            <li class="social-icons-facebook"><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/"
+            <li class="social-icons-facebook"><a data-toggle="tooltip" href="http://www.facebook.com/"
                 target="_blank" title="" data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-            <li class="social-icons-dribbble"><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/"
+            <li class="social-icons-dribbble"><a data-toggle="tooltip" href="http://www.dribbble.com/"
                 target="_blank" title="" data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
           </ul>
         </div>
@@ -189,7 +189,7 @@
             <p>The token you create has a url that only you can see. You can send email through this.</p>
             <p>For Linux users:</p>
             <pre><code class="html">
-curl http://freeservices.uz/api/v1/send?token={yourToken}&email={to_email}&subject={yourSubject}&message={yourMessage}
+curl http://freeservices.uz/api/v1?token={yourToken}&email={to_email}&subject={yourSubject}&message={yourMessage}
             </code></pre>
             <p>You put the token you received from the site in the place where it says <strong>yourToken</strong>. In
               the <strong>to_email</strong> field,
@@ -211,7 +211,7 @@ curl http://freeservices.uz/api/v1/send?token={yourToken}&email={to_email}&subje
 const axios = require('axios');
 
 const token = 'yourToken'
-const url = 'http://freeservices.uz/api/v1/send?'
+const url = 'http://freeservices.uz/api/v1?'
 
 async function sendData(message, email) {
   try {
@@ -238,7 +238,7 @@ sendData('Hello!', 'example@email.com');
         <code class="javascript">
 import requests
 
-url = 'http://freeservices.uz/api/v1/send'
+url = 'http://freeservices.uz/api/v1'
 
 try:
   response = requests.get(url, params={'token':token,'message': message, 'email': email,'subject':subject})
@@ -262,7 +262,7 @@ except requests.exceptions.RequestException as e:
             <pre>
 <code class="php">
 &lt;?php
-$url = 'http://freeservices.uz/api/v1/send?token=';
+$url = 'http://freeservices.uz/api/v1?token=';
 
 $data = $url.'yourToken&message='.$yourMessage.'&subject='.$subject.'&email='.$email;
 
@@ -389,11 +389,11 @@ if ($status_code == 200) {
     <footer id="footer" class="section bg-dark footer-text-light">
       <div class="container">
         <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
-          <li><a data-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title=""
+          <li><a data-toggle="tooltip" href="https://twitter.com/" target="_blank" title=""
               data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
-          <li><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title=""
+          <li><a data-toggle="tooltip" href="http://www.facebook.com/" target="_blank" title=""
               data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title=""
+          <li><a data-toggle="tooltip" href="http://www.dribbble.com/" target="_blank" title=""
               data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
           <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title=""
               data-original-title="GitHub"><i class="fab fa-github"></i></a></li>

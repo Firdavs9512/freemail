@@ -53,3 +53,19 @@ func ServicesPromotion(ctx iris.Context) {
 func Reseller(ctx iris.Context) {
 	ctx.View("home/reseller.html")
 }
+
+
+// robots.tx
+func Robotstxt(ctx iris.Context) {
+	ctx.ServeFile("template/home/robots.txt")
+}
+
+// sitemap.xml
+func Sitemapxml(ctx iris.Context) {
+	ctx.ServeFile("template/home/sitemap.xml")
+}
+
+// Google ads
+func Adstxt(ctx iris.Context){
+	ctx.ServeFile("template/home/ads.txt")
+}

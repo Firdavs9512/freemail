@@ -45,7 +45,7 @@ func ApiForUsers(ctx iris.Context) {
 	err := databases.TokenRequestUpdate(token.ID, token.Request+1)
 	if err != nil {
 		ctx.JSON(iris.Map{
-			"message": "Your token not found!",
+			"message": "Error for update token request!",
 		})
 		return
 	}
@@ -55,11 +55,12 @@ func ApiForUsers(ctx iris.Context) {
 
 	if res != nil {
 		ctx.JSON(iris.Map{
-			"message": "Your token not found!",
+			"message": "Error for send email!",
 		})
 		return
 	}
 
+	ctx.StatusCode(iris.StatusOK)
 	ctx.JSON(iris.Map{
 		"message": "Success",
 	})
